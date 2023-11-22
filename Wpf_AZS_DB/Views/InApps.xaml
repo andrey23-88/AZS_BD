@@ -1,0 +1,33 @@
+﻿<Window x:Class="Wpf_AZS_DB.Views.InApps"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf_AZS_DB.Views"
+        mc:Ignorable="d"
+                Title="Вход в приложение" Height="350" Width="310" Loaded="Window_Loaded" 
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Background ="#4B0E19">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="0.8*"/>
+        </Grid.RowDefinitions>
+        <Canvas Grid.Row="0" Background="#07194A">
+            <TextBlock  Background="#07194A" Text="Авторизация" Foreground ="#FFFAF0" FontSize="36" 
+                    FontFamily="Comic Sans MS" FontWeight="Bold" VerticalAlignment="Top" Canvas.Left="38"
+                        Canvas.Top="10" />
+        </Canvas>
+        <Canvas Grid.Row="1" Background="#FF4B0E19">
+            <TextBlock Text="Логин" FontSize="20" Canvas.Left="55" Canvas.Top="22" FontFamily="Comic Sans MS"
+                       Foreground="#FFEDBF0E" Width="179" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBox FontSize="20" Width="200" Canvas.Left="55" Canvas.Top="55" HorizontalAlignment="Center" 
+                     VerticalAlignment="Top" x:Name="userBox" Text="user"/>
+            <PasswordBox FontSize="20" Width="200" Canvas.Left="55" Canvas.Top="139" HorizontalAlignment="Center" 
+                     VerticalAlignment="Top" x:Name="pasBox" Password="user"/>
+            <Button x:Name="btnIn" Content="Войти" Canvas.Left="80" Canvas.Top="193" HorizontalAlignment="Center"
+                    VerticalAlignment="Top" Width="150" FontSize="20" Click="btnIn_Click" Background="#FFEEC62A"/>
+            <TextBlock Text="Пароль" FontSize="20" Canvas.Left="55" Canvas.Top="106" FontFamily="Comic Sans MS"
+                Foreground="#FFEDBF0E" Width="179" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        </Canvas >
+    </Grid>
+</Window>
